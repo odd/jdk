@@ -655,9 +655,6 @@ C2V_VMENTRY_NULL(jobject, resolvePossiblyCachedConstantInPool, (JNIEnv* env, job
           return JVMCIENV->get_jobject(JVMCIENV->get_JavaConstant_ILLEGAL());
         }
       }
-
-      JVMCIObject result = JVMCIENV->call_PrimitiveConstant_forTypeChar(type2char(bt2), raw_value, JVMCI_CHECK_NULL);
-      return JVMCIENV->get_jobject(result);
     }
   }
   return JVMCIENV->get_jobject(JVMCIENV->get_object_constant(obj));
