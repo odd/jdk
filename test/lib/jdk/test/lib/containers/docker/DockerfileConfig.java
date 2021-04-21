@@ -63,13 +63,6 @@ public class DockerfileConfig {
             return version;
         }
 
-        switch (Platform.getOsArch()) {
-            case "aarch64":
-            case "ppc64le":
-            case "s390x":
-                return "latest";
-            default:
-                return "7.6";
-        }
+        return "latest";
     }
 }
